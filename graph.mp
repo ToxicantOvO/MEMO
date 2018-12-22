@@ -29,19 +29,32 @@ pair x,xx,y,yy,A,B,C,D,E,F;
 x:=(-10u,0u); xx:=(10u,0u);
 y:=(0u,-10u); yy:=(0u,10u);
 
-A:=(-10u,0u); B:=(10u,0u);
+A:=(0u,-10u); B:=(0u,10u);
 C:=(-9u,10u); D:=(10u,-9u);
 E:=(-9u,-10u); F:=(10u,9u);
+
+fill B--(0,u)--(u,0)--F--cycle withcolor .8[blue,white];
+fill A--(0,-u)--(u,0)--D--cycle withcolor .8[red,white];
+fill C--(0,u)--(0,-u)--E--cycle withcolor .8[green,white];
+
+label.llft(btex \huge $x_1$ etex, xx);
+label.lrt(btex \huge $x_2$ etex, yy);
+label.ulft(btex \huge $d_1(x)=0$ etex, .2[A,(0,0)]);
+label.urt(btex \huge $d_2(x)=0$ etex, .2[C,(0,u)]);
+label.lrt(btex \huge $d_3(x)=0$ etex, .3[F,(u,0)]);
+
+label.bot(btex \huge $w_1$ etex, (-3u,0));
+label.top(btex \huge $w_2$ etex, (2u,3u));
+label.bot(btex \huge $w_3$ etex, (2u,-3u));
 
 drawarrow x--xx withpen pencircle scaled 1.5bp;
 drawarrow y--yy withpen pencircle scaled 1.5bp;
 
+drawdot(0,0) withpen pencircle scaled 5bp;
+
 draw A--B withpen pencircle scaled 1bp;
 draw C--D withpen pencircle scaled 1bp;
 draw E--F withpen pencircle scaled 1bp;
-
-label.llft(btex \huge $x_1$ etex, (10u,0u));
-label.lrt(btex \huge $x_2$ etex, (0u,10u));
 
 endfig;
 
