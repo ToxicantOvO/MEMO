@@ -43,14 +43,15 @@ label.ulft(btex \huge $d_1(x)=0$ etex, .2[A,(0,0)]);
 label.urt(btex \huge $d_2(x)=0$ etex, .2[C,(0,u)]);
 label.lrt(btex \huge $d_3(x)=0$ etex, .3[F,(u,0)]);
 
-label.bot(btex \huge $w_1$ etex, (-3u,0));
+label.bot(btex \huge $w_1$ etex, (-3u,-u));
 label.top(btex \huge $w_2$ etex, (2u,3u));
 label.bot(btex \huge $w_3$ etex, (2u,-3u));
+label.llft(btex \huge $O$ etex, (0,0));
 
 drawarrow x--xx withpen pencircle scaled 1.5bp;
 drawarrow y--yy withpen pencircle scaled 1.5bp;
 
-drawdot(0,0) withpen pencircle scaled 5bp;
+drawdot(0,0) withpen pencircle scaled 6bp;
 
 draw A--B withpen pencircle scaled 1bp;
 draw C--D withpen pencircle scaled 1bp;
